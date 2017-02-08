@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt-get install zip
+sudo apt-get install zip unzip expect 
 SECRET_KEY=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 34 | head -n 1)
 LINK_SALT=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 34 | head -n 1)
 RESET_SALT=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 34 | head -n 1)

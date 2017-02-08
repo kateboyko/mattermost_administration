@@ -1,3 +1,5 @@
 #!/bin/bash
 zip -r backup.zip /srv/docker/mattermost
-expect -f ftp.sh
+source ../mattermost.config
+expect -f ftp.sh $host $username $password
+rm backup.zip
